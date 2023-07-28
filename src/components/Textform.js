@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export default function Textform() {
-    const [text, setText] = useState('Enter Text here');
+    const [text, setText] = useState('');
 
     const handleUpClick =()=>{
         console.log("Uppercase was clicked" + text);
@@ -34,6 +34,12 @@ export default function Textform() {
                     convert to Lower case
                 </button>
             </div>
+             <div className="container my-3">
+                <h3>Your text summary</h3>
+                <p>{text.split(" ").length} words and {text.length} character</p>
+                <p>{0.008* text.split(" ").length} Minutes to read </p>
+                <h6>{text}Preview</h6>
+             </div>
         </>
 
     )
